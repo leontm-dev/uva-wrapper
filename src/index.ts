@@ -13,6 +13,7 @@ import { PremiumCategory } from "./premium";
 import { StoreCategory } from "./store";
 import { StoredMatchesCategory } from "./stored-matches";
 import { StoredMMRHistoryCategory } from "./stored-mmr-history";
+import { v1_MainCategory } from "./v1";
 import { VlrCategory } from "./vlr";
 
 export class UnofficialValorantAPI {
@@ -32,6 +33,7 @@ export class UnofficialValorantAPI {
     this.Store = new StoreCategory(this.apiKey);
     this.Stored_Matches = new StoredMatchesCategory(this.apiKey);
     this.Stored_MMR_History = new StoredMMRHistoryCategory(this.apiKey);
+    this.v1 = new v1_MainCategory(this.apiKey);
     this.Vlr = new VlrCategory(this.apiKey);
   }
 
@@ -50,5 +52,6 @@ export class UnofficialValorantAPI {
   Store: StoreCategory;
   Stored_Matches: StoredMatchesCategory;
   Stored_MMR_History: StoredMMRHistoryCategory;
+  v1: v1_MainCategory;
   Vlr: VlrCategory;
 }
