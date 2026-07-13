@@ -1,4 +1,5 @@
 import { v2_getVlrEsportsEvents } from "./getVlrEsportsEvents";
+import { v2_getVlrEventMatches } from "./getVlrEventMatches";
 
 export class v2_VlrCategory {
   constructor(readonly apiKey: string) {}
@@ -27,5 +28,14 @@ export class v2_VlrCategory {
     page?: number,
   ) {
     return await v2_getVlrEsportsEvents(this.apiKey, region, type, page);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-vlr-event-matches-v2
+   * @param eventId
+   * @returns Esports event matches retrieved successfully
+   */
+  async getEventMatches(eventId: number) {
+    return await v2_getVlrEventMatches(this.apiKey, eventId);
   }
 }
