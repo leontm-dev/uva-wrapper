@@ -15,7 +15,7 @@ export async function v1_getMMRHistoryByPuuid(
     {},
     { method: "GET" },
   )) as
-    | (DefaultApiResponse<v1_getMMRHistoryByPuuid_ResponseData> & {
+    | (DefaultApiResponse<v1_getMMRHistoryByPuuid_ResponseData[]> & {
         name: string;
         tag: string;
       })

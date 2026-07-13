@@ -16,7 +16,7 @@ export async function v1_getMMRHistoryByName(
     {},
     { method: "GET" },
   )) as
-    | (DefaultApiResponse<v1_getMMRHistoryByName_ResponseData> & {
+    | (DefaultApiResponse<v1_getMMRHistoryByName_ResponseData[]> & {
         name: string;
         tag: string;
       })
