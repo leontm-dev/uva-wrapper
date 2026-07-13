@@ -1,7 +1,7 @@
 import { v1_generateCrosshairImage } from "./generateCrosshairImage";
 
 export class v1_CrosshairCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/generate-crosshair-image-v1

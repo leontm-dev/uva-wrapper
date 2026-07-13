@@ -7,7 +7,7 @@ import { v1_getWebsiteContent } from "./getWebsiteContent";
 import { v1_getWebsiteEntryById } from "./getWebsiteEntryById";
 
 export class v1_MiscCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-content-v1

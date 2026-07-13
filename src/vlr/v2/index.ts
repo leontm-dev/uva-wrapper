@@ -8,7 +8,7 @@ import { v2_getVlrTeamMatches } from "./getVlrTeamMatches";
 import { v2_getVlrTeamTransactions } from "./getVlrTeamTransactions";
 
 export class v2_VlrCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-vlr-esports-events-v2

@@ -2,7 +2,7 @@ import { v1_MMRHistoryCategory } from "./v1";
 import { v2_MMRHistoryCategory } from "./v2";
 
 export class MMRHistoryCategory {
-  constructor(readonly apiKey: string) {
+  constructor(private readonly apiKey: string) {
     this.v1 = new v1_MMRHistoryCategory(this.apiKey);
     this.v2 = new v2_MMRHistoryCategory(this.apiKey);
   }

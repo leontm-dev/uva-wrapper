@@ -1,7 +1,7 @@
 import { v2_getLeaderboard } from "./getLeaderboard";
 
 export class v2_LeaderboardCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-leaderboard-v2

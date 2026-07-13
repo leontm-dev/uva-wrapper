@@ -2,7 +2,7 @@ import { v4_getMatchesByName } from "./getMatchesByName";
 import { v4_getMatchesByPuuid } from "./getMatchesByPuuid";
 
 export class v4_MatchesCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-matches-by-name-v4

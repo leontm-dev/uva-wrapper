@@ -1,7 +1,7 @@
 import { v1_MiscCategory } from "./v1";
 
 export class MiscCategory {
-  constructor(readonly apiKey: string) {
+  constructor(private readonly apiKey: string) {
     this.v1 = new v1_MiscCategory(this.apiKey);
   }
 

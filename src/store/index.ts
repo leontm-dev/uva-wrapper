@@ -2,7 +2,7 @@ import { getFeaturedStoreItems } from "./getFeaturedStoreItems";
 import { getStoreOffers } from "./getStoreOffers";
 
 export class StoreCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-featured-store-items

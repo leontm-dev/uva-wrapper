@@ -1,7 +1,7 @@
 import { v1_getPremierLeaderboard } from "./getPremierLeaderboard";
 
 export class v1_PremierLeaderboardCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-premier-leaderboard-v1

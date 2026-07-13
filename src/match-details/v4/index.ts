@@ -1,7 +1,7 @@
 import { v4_getMatchDetails } from "./getMatchDetails";
 
 export class v4_MatchDetailsCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-match-details-v4

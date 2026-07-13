@@ -3,7 +3,7 @@ import { v1_getPremierTeamByName } from "./getPremierTeamByName";
 import { v1_searchPremierTeams } from "./searchPremierTeams";
 
 export class v1_PremierCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/search-premier-teams-v1

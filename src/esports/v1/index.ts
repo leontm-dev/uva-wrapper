@@ -1,7 +1,7 @@
 import { v1_getEsportsSchedule } from "./getEsportsSchedule";
 
 export class v1_EsportsCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-esports-schedule-v1

@@ -2,7 +2,7 @@ import { v1_getPremierTeamHistoryById } from "./getPremierTeamHistoryById";
 import { v1_getPremierTeamHistoryByName } from "./getPremierTeamHistoryByName";
 
 export class v1_PremierHistoryCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-premier-team-history-by-name-v1

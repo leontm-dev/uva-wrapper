@@ -2,7 +2,7 @@ import { v2_getAccount } from "./getAccount";
 import { v2_getAccountByPuuid } from "./getAccountByPuuid";
 
 export class v2_AccountCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-account-v2

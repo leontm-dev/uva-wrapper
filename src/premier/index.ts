@@ -1,7 +1,7 @@
 import { v1_PremierCategory } from "./v1";
 
 export class PremierCategory {
-  constructor(readonly apiKey: string) {
+  constructor(private readonly apiKey: string) {
     this.v1 = new v1_PremierCategory(this.apiKey);
   }
 

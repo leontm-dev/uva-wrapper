@@ -2,7 +2,7 @@ import { v2_getStoredMMRHistoryByName } from "./getStoredMMRHistoryByName";
 import { v2_getStoredMMRHistoryByPuuid } from "./getStoredMMRHistoryByPuuid";
 
 export class v2_StoredMMRHistoryCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-stored-mmr-history-by-name-v2

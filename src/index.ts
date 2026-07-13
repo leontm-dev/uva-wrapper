@@ -17,7 +17,7 @@ import { StoredMMRHistoryCategory } from "./stored-mmr-history";
 import { VlrCategory } from "./vlr";
 
 export class UnofficialValorantAPI {
-  constructor(readonly apiKey: string) {
+  constructor(private readonly apiKey: string) {
     this.Account = new AccountCategory(this.apiKey);
     this.Crosshair = new CrosshairCategory(this.apiKey);
     this.Esports = new EsportsCategory(this.apiKey);

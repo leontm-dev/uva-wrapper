@@ -2,7 +2,7 @@ import { v2_getMMRByName } from "./getMMRByName";
 import { v2_getMMRByPuuid } from "./getMMRByPuuid";
 
 export class v2_MMRCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/valorant/get-mmr-by-name-v2

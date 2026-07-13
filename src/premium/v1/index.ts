@@ -4,7 +4,7 @@ import { v1_getPremiumWebhookSettings } from "./getPremiumWebhookSettings";
 import { v1_updatePremiumWebhookUser } from "./updatePremiumWebhookUser";
 
 export class v1_PremiumCategory {
-  constructor(readonly apiKey: string) {}
+  constructor(private readonly apiKey: string) {}
 
   /**
    * @link https://docs.henrikdev.xyz/api-reference/premium/get-premium-webhook-settings
