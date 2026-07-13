@@ -16,7 +16,7 @@ export class v4_MatchesCategory {
    * @param start Start index for pagination (optional)
    * @returns Match history retrieved successfully
    */
-  async getName(
+  async getByName(
     affinity: string,
     platform: string,
     name: string,
