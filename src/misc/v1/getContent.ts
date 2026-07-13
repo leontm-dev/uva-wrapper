@@ -1,4 +1,4 @@
-import { doApiRequest } from "../lib/request-handler";
+import { doApiRequest } from "../../lib/request-handler";
 
 export async function v1_getContent(apiKey: string, locale?: string) {
   return await doApiRequest<v1_getContent_ResponseData>(

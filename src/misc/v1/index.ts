@@ -1,6 +1,6 @@
 import { v1_getContent } from "./getContent";
 
-export class v1_MainCategory {
+export class v1_MiscCategory {
   constructor(readonly apiKey: string) {}
 
   /**
