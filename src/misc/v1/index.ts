@@ -3,6 +3,7 @@ import { v1_getGameVersion } from "./getGameVersion";
 import { v1_getQueueStatus } from "./getQueueStatus";
 import { v1_getStatus } from "./getStatus";
 import { v1_getWebsiteContent } from "./getWebsiteContent";
+import { v1_getWebsiteEntryById } from "./getWebsiteEntryById";
 
 export class v1_MiscCategory {
   constructor(readonly apiKey: string) {}
@@ -51,5 +52,15 @@ export class v1_MiscCategory {
    */
   async getWebsiteContent(countryCode: string, category?: string) {
     return await v1_getWebsiteContent(this.apiKey, countryCode, category);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-website-entry-by-id-v1
+   * @param dbId Database ID of the website entry
+   * @param countryCode Country code (e.g., en-us, de-de)
+   * @returns Website entry retrieved successfully
+   */
+  async getWebsiteEntryById(dbId: string, countryCode: string) {
+    return await v1_getWebsiteEntryById(this.apiKey, dbId, countryCode);
   }
 }
