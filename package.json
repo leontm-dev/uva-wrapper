@@ -1,0 +1,36 @@
+{
+  "name": "uva-wrapper",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "yarn && tsc"
+  },
+  "keywords": [
+    "valorant",
+    "unofficial-valorant-api",
+    "api",
+    "wrapper"
+  ],
+  "homepage": "https://github.com/leontm-dev/uva-wrapper",
+  "author": {
+    "email": "lanneken09@gmail.com",
+    "name": "LeonTM",
+    "url": "https://leontm.me"
+  },
+  "license": "MIT",
+  "description": "A type-safe API wrapper for Hendrik3's unofficial-valorant-api",
+  "dependencies": {},
+  "bugs": {
+    "email": "lanneken09@gmail.com",
+    "url": "https://github.com/leontm-dev/uva-wrapper/issues"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.4.1",
+    "@types/node": "^26.1.1",
+    "jest": "^30.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "7.0.2"
+  },
+  "readme": "https://github.com/leontm-dev/uva-wrapper/blob/main/README.md"
+}
