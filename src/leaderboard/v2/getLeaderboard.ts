@@ -33,7 +33,7 @@ export interface v2_getLeaderboard_ResponseData {
     numberOfWins: number;
     rankedRating: number;
     tagLine: string;
-    puuid: string;
+    puuid: string | null;
   }[];
   radiant_threshold: number;
   total_players: number;

@@ -43,7 +43,7 @@ export interface v3_getLeaderboard_ResponseData {
     title: string;
     updated_at: string;
     wins: number;
-    puuid: string;
+    puuid: string | null;
   }[];
   thresholds: {
     start_index: number;
