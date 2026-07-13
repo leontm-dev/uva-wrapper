@@ -17,7 +17,7 @@ export interface v2_getVlrEventMatches_ResponseData {
   teams: {
     is_winner: boolean;
     name: string;
-    score: number;
+    score: number | null;
   }[];
   date: string;
 }
