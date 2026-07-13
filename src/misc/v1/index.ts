@@ -1,6 +1,7 @@
 import { v1_getContent } from "./getContent";
 import { v1_getGameVersion } from "./getGameVersion";
 import { v1_getQueueStatus } from "./getQueueStatus";
+import { v1_getRawRiotAPIData } from "./getRawRiotAPIData";
 import { v1_getStatus } from "./getStatus";
 import { v1_getWebsiteContent } from "./getWebsiteContent";
 import { v1_getWebsiteEntryById } from "./getWebsiteEntryById";
@@ -62,5 +63,31 @@ export class v1_MiscCategory {
    */
   async getWebsiteEntryById(dbId: string, countryCode: string) {
     return await v1_getWebsiteEntryById(this.apiKey, dbId, countryCode);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-raw-riot-api-data-v1
+   * @param region
+   * @param type
+   * @param value
+   * @param platform
+   * @param queries
+   * @returns Raw Riot API data retrieved successfully
+   */
+  async getRawRiotAPIData(
+    region: string,
+    type: string,
+    value: string | string[],
+    platform: string | null,
+    queries: string | null,
+  ) {
+    return await v1_getRawRiotAPIData(
+      this.apiKey,
+      region,
+      type,
+      value,
+      platform,
+      queries,
+    );
   }
 }
