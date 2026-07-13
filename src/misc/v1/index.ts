@@ -1,4 +1,5 @@
 import { v1_getContent } from "./getContent";
+import { v1_getStatus } from "./getStatus";
 
 export class v1_MiscCategory {
   constructor(readonly apiKey: string) {}
@@ -10,5 +11,14 @@ export class v1_MiscCategory {
    */
   async getContent(locale?: string) {
     return await v1_getContent(this.apiKey, locale);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-status-v1
+   * @param affinity Region/affinity (e.g., na, eu, ap, kr)
+   * @returns Status retrieved successfully
+   */
+  async getStatus(affinity: string) {
+    return await v1_getStatus(this.apiKey, affinity);
   }
 }
