@@ -2,6 +2,7 @@ import { v2_getVlrEsportsEvents } from "./getVlrEsportsEvents";
 import { v2_getVlrEventMatches } from "./getVlrEventMatches";
 import { v2_getVlrMatchDetails } from "./getVlrMatchDetails";
 import { v2_getVlrTeam } from "./getVlrTeam";
+import { v2_getVlrTeamMatches } from "./getVlrTeamMatches";
 
 export class v2_VlrCategory {
   constructor(readonly apiKey: string) {}
@@ -57,5 +58,15 @@ export class v2_VlrCategory {
    */
   async getTeam(teamId: number) {
     return await v2_getVlrTeam(this.apiKey, teamId);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-vlr-team-matches-v2
+   * @param teamId
+   * @param page
+   * @returns Esports team matches retrieved successfully
+   */
+  async getTeamMatches(teamId: number, page?: number) {
+    return await v2_getVlrTeamMatches(this.apiKey, teamId, page);
   }
 }
