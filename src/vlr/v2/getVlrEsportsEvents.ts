@@ -35,5 +35,6 @@ export interface v2_getVlrEsportsEvents_ResponseData {
   price: string;
   region: string;
   slug: string;
+  status: "completed" | "ongoing" | "upcoming" | "unknown";
   title: string;
 }
