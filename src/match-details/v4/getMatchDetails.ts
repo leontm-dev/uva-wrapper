@@ -7,7 +7,7 @@ export async function v4_getMatchDetails(
 ) {
   return await doApiRequest(
     apiKey,
-    `/v4/match/${affinity}/${matchId}`,
+    `/valorant/v4/match/${affinity}/${matchId}`,
     {},
     { method: "GET" },
   );

@@ -8,7 +8,7 @@ export async function v1_getPremierTeamById(
 ) {
   return await doApiRequest<v1_getPremierTeamById_ResponseData>(
     apiKey,
-    `/v1/premier/${id}`,
+    `/valorant/v1/premier/${id}`,
     { season, affinity },
     { method: "GET" },
   );

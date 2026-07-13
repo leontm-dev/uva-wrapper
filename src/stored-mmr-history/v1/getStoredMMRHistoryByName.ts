@@ -13,7 +13,7 @@ export async function v1_getStoredMMRHistoryByName(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v1/stored-mmr-history/${affinity}/${name}/${tag}`,
+    `/valorant/v1/stored-mmr-history/${affinity}/${name}/${tag}`,
     { size: size?.toString() },
     { method: "GET" },
   )) as

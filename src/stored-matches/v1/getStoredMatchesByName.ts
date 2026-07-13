@@ -15,7 +15,7 @@ export async function v1_getStoredMatchesByName(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v1/stored-matches/${affinity}/${name}/${tag}`,
+    `/valorant/v1/stored-matches/${affinity}/${name}/${tag}`,
     { mode, map, size: size?.toString() },
     { method: "GET" },
   )) as

@@ -9,7 +9,7 @@ export async function v2_getMMRHistoryByName(
 ) {
   return await doApiRequest<v2_getMMRHistoryByName_ResponseData>(
     apiKey,
-    `/v2/mmr-history/${affinity}/${platform}/${name}/${tag}`,
+    `/valorant/valorant/v2/mmr-history/${affinity}/${platform}/${name}/${tag}`,
     {},
     { method: "GET" },
   );

@@ -9,7 +9,7 @@ export async function v3_getMMRByName(
 ) {
   return await doApiRequest<v3_getMMRByName_ResponseData>(
     apiKey,
-    `/v3/mmr/${affinity}/${platform}/${name}/${tag}`,
+    `/valorant/v3/mmr/${affinity}/${platform}/${name}/${tag}`,
     {},
     { method: "GET" },
   );

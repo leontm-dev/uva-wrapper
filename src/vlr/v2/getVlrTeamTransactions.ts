@@ -6,7 +6,7 @@ export async function v2_getVlrTeamTransactions(
 ) {
   return await doApiRequest<v2_getVlrTeamTransactions_ResponseData[]>(
     apiKey,
-    `/v2/esports/vlr/teams/${teamId}/transactions`,
+    `/valorant/v2/esports/vlr/teams/${teamId}/transactions`,
   );
 }
 export interface v2_getVlrTeamTransactions_ResponseData {

@@ -12,7 +12,7 @@ export async function v4_getMatchesByPuuid(
 ) {
   return await doApiRequest<v4_getMatchesByPuuid_ResponseData[]>(
     apiKey,
-    `/v4/by-puuid/matches/${affinity}/${platform}/${puuid}`,
+    `/valorant/v4/by-puuid/matches/${affinity}/${platform}/${puuid}`,
     {
       mode,
       map,

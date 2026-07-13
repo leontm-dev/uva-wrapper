@@ -16,7 +16,7 @@ export async function v3_getLeaderboard(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v3/leaderboard/${affinity}/${platform}`,
+    `/valorant/v3/leaderboard/${affinity}/${platform}`,
     { season, size: size?.toString(), page: page?.toString(), name, tag },
     { method: "GET" },
   )) as

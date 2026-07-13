@@ -3,7 +3,7 @@ import { doApiRequest } from "../../lib/request-handler";
 export async function v2_getMatchDetails(apiKey: string, matchId: string) {
   return await doApiRequest(
     apiKey,
-    `/v2/match/${matchId}`,
+    `/valorant/v2/match/${matchId}`,
     {},
     { method: "GET" },
   );

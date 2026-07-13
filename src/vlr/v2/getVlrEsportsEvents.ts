@@ -19,7 +19,7 @@ export async function v2_getVlrEsportsEvents(
 ) {
   return await doApiRequest<v2_getVlrEsportsEvents_ResponseData[]>(
     apiKey,
-    "/v2/esports/vlr/events",
+    "/valorant/v2/esports/vlr/events",
     { region, type, page: page?.toString() },
     { method: "GET" },
   );

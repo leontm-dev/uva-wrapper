@@ -13,7 +13,7 @@ export async function v2_getStoredMMRHistoryByPuuid(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v2/by-puuid/stored-mmr-history/${affinity}/${platform}/${puuid}`,
+    `/valorant/v2/by-puuid/stored-mmr-history/${affinity}/${platform}/${puuid}`,
     { size: size?.toString() },
     { method: "GET" },
   )) as

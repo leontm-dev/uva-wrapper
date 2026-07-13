@@ -7,7 +7,7 @@ export async function v2_getVlrTeamMatches(
 ) {
   return await doApiRequest<v2_getVlrTeamMatches_ResponseData[]>(
     apiKey,
-    `/v2/esports/vlr/teams/${teamId}/matches`,
+    `/valorant/v2/esports/vlr/teams/${teamId}/matches`,
     {
       page: page?.toString(),
     },

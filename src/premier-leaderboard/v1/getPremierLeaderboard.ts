@@ -9,7 +9,7 @@ export async function v1_getPremierLeaderboard(
 ) {
   return await doApiRequest<v1_getPremierLeaderboard_ResponseData[]>(
     apiKey,
-    `/v1/premier/leaderboard/${affinity}`,
+    `/valorant/v1/premier/leaderboard/${affinity}`,
     { conference, division, season },
     { method: "GET" },
   );

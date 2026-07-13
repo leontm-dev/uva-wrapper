@@ -9,7 +9,7 @@ export async function v1_getLeaderboard(
 ) {
   return await doApiRequest<unknown>(
     apiKey,
-    `/v1/leaderboard/${affinity}`,
+    `/valorant/v1/leaderboard/${affinity}`,
     { season, name, tag },
     { method: "GET" },
   );

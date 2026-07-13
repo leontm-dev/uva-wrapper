@@ -7,7 +7,7 @@ export async function v1_getEsportsSchedule(
 ) {
   return await doApiRequest<v1_getEsportsSchedule_ResponseData[]>(
     apiKey,
-    "/v1/esports/schedule",
+    "/valorant/v1/esports/schedule",
     { region, league },
     { method: "GET" },
   );

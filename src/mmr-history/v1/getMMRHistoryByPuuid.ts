@@ -11,7 +11,7 @@ export async function v1_getMMRHistoryByPuuid(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v1/by-puuid/mmr-history/${affinity}/${puuid}`,
+    `/valorant/v1/by-puuid/mmr-history/${affinity}/${puuid}`,
     {},
     { method: "GET" },
   )) as

@@ -9,7 +9,7 @@ export async function v1_searchPremierTeams(
 ) {
   return await doApiRequest<v1_searchPremierTeams_Response_Data[]>(
     apiKey,
-    "/v1/premier/search",
+    "/valorant/v1/premier/search",
     { name, tag, id, season },
     { method: "GET" },
   );

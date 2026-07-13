@@ -8,7 +8,7 @@ export async function v3_getMMRByPuuid(
 ) {
   return await doApiRequest<v3_getMMRByPuuid_ResponseData>(
     apiKey,
-    `/v3/by-puuid/mmr/${affinity}/${platform}/${puuid}`,
+    `/valorant/v3/by-puuid/mmr/${affinity}/${platform}/${puuid}`,
     {},
     { method: "GET" },
   );

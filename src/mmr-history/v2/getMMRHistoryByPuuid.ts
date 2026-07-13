@@ -8,7 +8,7 @@ export async function v2_getMMRHistoryByPuuid(
 ) {
   return await doApiRequest<v2_getMMRHistoryByPuuid_ResponseData>(
     apiKey,
-    `/v2/by-puuid/mmr-history/${affinity}/${platform}/${puuid}`,
+    `/valorant/v2/by-puuid/mmr-history/${affinity}/${platform}/${puuid}`,
     {},
     { method: "GET" },
   );

@@ -7,7 +7,7 @@ export async function v1_getWebsiteEntryById(
 ) {
   return await doApiRequest<v1_getWebsiteEntryById_ResponseData[]>(
     apiKey,
-    `/v1/website/${countryCode}/${dbId}`,
+    `/valorant/v1/website/${countryCode}/${dbId}`,
     {},
     { method: "GET" },
   );

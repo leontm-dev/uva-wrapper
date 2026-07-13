@@ -7,7 +7,7 @@ export async function v2_getVlrPlayerMatches(
 ) {
   return await doApiRequest<v2_getVlrPlayerMatches_ResponseData[]>(
     apiKey,
-    `/v2/esports/vlr/players/${player}/matches`,
+    `/valorant/v2/esports/vlr/players/${player}/matches`,
     {
       page: page?.toString(),
     },

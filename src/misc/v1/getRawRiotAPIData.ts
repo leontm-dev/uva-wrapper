@@ -10,7 +10,7 @@ export async function v1_getRawRiotAPIData(
 ) {
   return await doApiRequest<unknown[]>(
     apiKey,
-    "/v1/raw",
+    "/valorant/v1/raw",
     {},
     {
       method: "POST",

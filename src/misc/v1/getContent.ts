@@ -3,7 +3,7 @@ import { doApiRequest } from "../../lib/request-handler";
 export async function v1_getContent(apiKey: string, locale?: string) {
   return await doApiRequest<v1_getContent_ResponseData>(
     apiKey,
-    "/v1/content",
+    "/valorant/v1/content",
     { locale },
     { method: "GET" },
   );

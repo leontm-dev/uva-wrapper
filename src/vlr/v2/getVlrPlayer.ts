@@ -7,7 +7,7 @@ export async function v2_getVlrPlayer(
 ) {
   return await doApiRequest(
     apiKey,
-    `/v2/esports/vlr/players/${player}`,
+    `/valorant/v2/esports/vlr/players/${player}`,
     { timespan },
     { method: "GET" },
   );

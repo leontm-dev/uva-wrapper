@@ -9,7 +9,7 @@ export async function v1_getPremierTeamByName(
 ) {
   return await doApiRequest<v1_getPremierTeamByName_ResponseData>(
     apiKey,
-    `/v1/premier/${name}/${tag}`,
+    `/valorant/v1/premier/${name}/${tag}`,
     { season, affinity },
     { method: "GET" },
   );

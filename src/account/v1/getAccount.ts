@@ -8,7 +8,7 @@ export async function v1_getAccount(
 ) {
   return await doApiRequest<v1_getAccount_ResponseData>(
     apiKey,
-    `/v1/account/${name}/${tag}`,
+    `/valorant/v1/account/${name}/${tag}`,
     { force: force ? (force ? "true" : "false") : undefined },
     { method: "GET" },
   );

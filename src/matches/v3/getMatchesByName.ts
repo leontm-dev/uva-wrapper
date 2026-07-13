@@ -11,7 +11,7 @@ export async function v3_getMatchesByName(
 ) {
   return await doApiRequest<v3_getMatchesByName_ResponseData[]>(
     apiKey,
-    `/v3/matches/${affinity}/${name}/${tag}`,
+    `/valorant/v3/matches/${affinity}/${name}/${tag}`,
     {
       mode,
       map,

@@ -3,7 +3,7 @@ import { doApiRequest } from "../../lib/request-handler";
 export async function v1_getGameVersion(apiKey: string, affinity: string) {
   return await doApiRequest<v1_getGameVersion_ResponseData>(
     apiKey,
-    `/v1/version/${affinity}`,
+    `/valorant/v1/version/${affinity}`,
     {},
     { method: "GET" },
   );

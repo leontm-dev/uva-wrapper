@@ -8,7 +8,7 @@ export async function v1_getPremierTeamHistoryByName(
 ) {
   return await doApiRequest<v1_getPremierTeamHistoryByName_ResponseData>(
     apiKey,
-    `/v1/premier/${name}/${tag}/history`,
+    `/valorant/v1/premier/${name}/${tag}/history`,
     { season },
     { method: "GET" },
   );

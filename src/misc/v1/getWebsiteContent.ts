@@ -7,7 +7,7 @@ export async function v1_getWebsiteContent(
 ) {
   return await doApiRequest<v1_getWebsiteContent_ResponseData[]>(
     apiKey,
-    `/v1/website/${countryCode}`,
+    `/valorant/v1/website/${countryCode}`,
     { category },
     { method: "GET" },
   );

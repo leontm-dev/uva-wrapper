@@ -11,7 +11,7 @@ export async function v2_getLeaderboard(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v2/leaderboard/${affinity}`,
+    `/valorant/v2/leaderboard/${affinity}`,
     { season, name, tag, puuid },
     { method: "GET" },
   )) as v2_getLeaderboard_ResponseData | DefaultErrorsResponse;

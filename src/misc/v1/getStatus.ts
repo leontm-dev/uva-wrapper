@@ -3,7 +3,7 @@ import { doApiRequest } from "../../lib/request-handler";
 export async function v1_getStatus(apiKey: string, affinity: string) {
   return await doApiRequest<v1_getStatus_ResponseData>(
     apiKey,
-    `/v1/status/${affinity}`,
+    `/valorant/v1/status/${affinity}`,
     {},
     { method: "GET" },
   );

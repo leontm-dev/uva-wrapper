@@ -14,7 +14,7 @@ export async function v1_getStoredMatchesByPuuid(
 ) {
   return (await doApiRequest(
     apiKey,
-    `/v1/by-puuid/stored-matches/${affinity}/${puuid}`,
+    `/valorant/v1/by-puuid/stored-matches/${affinity}/${puuid}`,
     { mode, map, size: size?.toString() },
     { method: "GET" },
   )) as

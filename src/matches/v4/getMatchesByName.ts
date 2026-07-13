@@ -13,7 +13,7 @@ export async function v4_getMatchesByName(
 ) {
   return await doApiRequest<v4_getMatchesByName_ResponseData[]>(
     apiKey,
-    `/v4/matches/${affinity}/${platform}/${name}/${tag}`,
+    `/valorant/valorant/v4/matches/${affinity}/${platform}/${name}/${tag}`,
     {
       mode,
       map,

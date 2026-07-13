@@ -3,7 +3,7 @@ import { doApiRequest } from "../../lib/request-handler";
 export async function v2_getVlrTeam(apiKey: string, teamId: number) {
   return await doApiRequest<v2_getVlrTeam_ResponseData>(
     apiKey,
-    `/v2/esports/vlr/teams/${teamId}`,
+    `/valorant/v2/esports/vlr/teams/${teamId}`,
     {},
     { method: "GET" },
   );

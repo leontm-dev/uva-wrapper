@@ -7,7 +7,7 @@ export async function v1_getPremierTeamHistoryById(
 ) {
   return await doApiRequest<v1_getPremierTeamHistoryById_ResponseData>(
     apiKey,
-    `/v1/premier/${id}/history`,
+    `/valorant/v1/premier/${id}/history`,
     { season },
     { method: "GET" },
   );

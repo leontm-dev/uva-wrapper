@@ -7,7 +7,7 @@ export async function v1_getAccountByPuuid(
 ) {
   return doApiRequest<v1_getAccountByPuuid_ResponseData>(
     apiKey,
-    `/v1/by-puuid/account/${puuid}`,
+    `/valorant/v1/by-puuid/account/${puuid}`,
     { force: force ? (force ? "true" : "false") : undefined },
     { method: "GET" },
   );
