@@ -1,4 +1,5 @@
 import { v1_addPremiumWebhookUser } from "./addPremiumWebhookUser";
+import { v1_deletePremiumWebhookUser } from "./deletePremiumWebhookUser";
 import { v1_getPremiumWebhookSettings } from "./getPremiumWebhookSettings";
 import { v1_updatePremiumWebhookUser } from "./updatePremiumWebhookUser";
 
@@ -47,5 +48,14 @@ export class v1_PremiumCategory {
    */
   async updateWebhookUser(id: string, events: ("MATCH" | "MMR")[]) {
     return await v1_updatePremiumWebhookUser(this.apiKey, id, events);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/premium/delete-premium-webhook-user
+   * @param id Tracked user id
+   * @returns Tracked user removed successfully
+   */
+  async deleteWebhookUser(id: string) {
+    return await v1_deletePremiumWebhookUser(this.apiKey, id);
   }
 }
