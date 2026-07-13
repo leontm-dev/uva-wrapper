@@ -4,6 +4,7 @@ import { MatchDetailsCategory } from "./match-details";
 import { MatchesCategory } from "./matches";
 import { MMRCategory } from "./mmr";
 import { MMRHistoryCategory } from "./mmr-history";
+import { PremierCategory } from "./premier";
 
 export class UnofficialValorantAPI {
   constructor(readonly apiKey: string) {
@@ -13,6 +14,7 @@ export class UnofficialValorantAPI {
     this.Matches = new MatchesCategory(this.apiKey);
     this.MMR = new MMRCategory(this.apiKey);
     this.MMR_History = new MMRHistoryCategory(this.apiKey);
+    this.Premier = new PremierCategory(this.apiKey);
   }
 
   Account: AccountCategory;
@@ -21,4 +23,5 @@ export class UnofficialValorantAPI {
   Matches: MatchesCategory;
   MMR: MMRCategory;
   MMR_History: MMRHistoryCategory;
+  Premier: PremierCategory;
 }
