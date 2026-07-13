@@ -7,7 +7,7 @@ export async function v1_getMMRByPuuid(
 ) {
   return await doApiRequest<v1_getMMRByPuuid_ResponseData>(
     apiKey,
-    `/v1/mmr/${affinity}/${puuid}`,
+    `/v1/by-puuid/mmr/${affinity}/${puuid}`,
     {},
     { method: "GET" },
   );
