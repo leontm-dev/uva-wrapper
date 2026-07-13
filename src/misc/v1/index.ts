@@ -1,4 +1,5 @@
 import { v1_getContent } from "./getContent";
+import { v1_getQueueStatus } from "./getQueueStatus";
 import { v1_getStatus } from "./getStatus";
 
 export class v1_MiscCategory {
@@ -20,5 +21,14 @@ export class v1_MiscCategory {
    */
   async getStatus(affinity: string) {
     return await v1_getStatus(this.apiKey, affinity);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-queue-status-v1
+   * @param affinity Region/affinity (e.g., na, eu, ap, kr)
+   * @returns Queue status retrieved successfully
+   */
+  async getQueueStatus(affinity: string) {
+    return await v1_getQueueStatus(this.apiKey, affinity);
   }
 }
