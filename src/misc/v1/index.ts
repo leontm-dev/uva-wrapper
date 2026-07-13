@@ -1,4 +1,5 @@
 import { v1_getContent } from "./getContent";
+import { v1_getGameVersion } from "./getGameVersion";
 import { v1_getQueueStatus } from "./getQueueStatus";
 import { v1_getStatus } from "./getStatus";
 
@@ -30,5 +31,14 @@ export class v1_MiscCategory {
    */
   async getQueueStatus(affinity: string) {
     return await v1_getQueueStatus(this.apiKey, affinity);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-game-version-v1
+   * @param affinity Region/affinity (e.g., na, eu, ap, kr)
+   * @returns Version data retrieved successfully
+   */
+  async getGameVersion(affinity: string) {
+    return await v1_getGameVersion(this.apiKey, affinity);
   }
 }
