@@ -1,5 +1,8 @@
 export type DefaultApiResponse<T> = {
   data: T;
+  /**
+   * Required range: x >= 0
+   */
   status: number;
 };
 export type DefaultErrorsResponse = {
