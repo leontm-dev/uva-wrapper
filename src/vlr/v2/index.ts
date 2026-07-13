@@ -1,6 +1,7 @@
 import { v2_getVlrEsportsEvents } from "./getVlrEsportsEvents";
 import { v2_getVlrEventMatches } from "./getVlrEventMatches";
 import { v2_getVlrMatchDetails } from "./getVlrMatchDetails";
+import { v2_getVlrPlayer } from "./getVlrPlayer";
 import { v2_getVlrTeam } from "./getVlrTeam";
 import { v2_getVlrTeamMatches } from "./getVlrTeamMatches";
 import { v2_getVlrTeamTransactions } from "./getVlrTeamTransactions";
@@ -78,5 +79,15 @@ export class v2_VlrCategory {
    */
   async getTeamTransactions(teamId: number) {
     return await v2_getVlrTeamTransactions(this.apiKey, teamId);
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-vlr-player-v2
+   * @param player
+   * @param timespan
+   * @returns Esports player profile retrieved successfully
+   */
+  async getPlayer(player: number, timespan?: "30d" | "60d" | "90d" | "all") {
+    return await v2_getVlrPlayer(this.apiKey, player, timespan);
   }
 }
