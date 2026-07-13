@@ -1,0 +1,38 @@
+import { AccountCategory } from "./account";
+import { CrosshairCategory } from "./crosshair";
+import { EsportsCategory } from "./esports";
+import { LeaderboardCategory } from "./leaderboard";
+import { MatchDetailsCategory } from "./match-details";
+import { MatchesCategory } from "./matches";
+import { MiscCategory } from "./misc";
+import { MMRCategory } from "./mmr";
+import { MMRHistoryCategory } from "./mmr-history";
+import { PremierCategory } from "./premier";
+import { PremierHistoryCategory } from "./premier-history";
+import { PremierLeaderboardCategory } from "./premier-leaderboard";
+import { PremiumCategory } from "./premium";
+import { StoreCategory } from "./store";
+import { StoredMatchesCategory } from "./stored-matches";
+import { StoredMMRHistoryCategory } from "./stored-mmr-history";
+import { VlrCategory } from "./vlr";
+export declare class UnofficialValorantAPI {
+    private readonly apiKey;
+    constructor(apiKey: string);
+    Account: AccountCategory;
+    Crosshair: CrosshairCategory;
+    Esports: EsportsCategory;
+    Leaderboard: LeaderboardCategory;
+    Match_Details: MatchDetailsCategory;
+    Matches: MatchesCategory;
+    Misc: MiscCategory;
+    MMR: MMRCategory;
+    MMR_History: MMRHistoryCategory;
+    Premier: PremierCategory;
+    Premier_History: PremierHistoryCategory;
+    Premier_Leaderboard: PremierLeaderboardCategory;
+    Premium: PremiumCategory;
+    Store: StoreCategory;
+    Stored_Matches: StoredMatchesCategory;
+    Stored_MMR_History: StoredMMRHistoryCategory;
+    Vlr: VlrCategory;
+}

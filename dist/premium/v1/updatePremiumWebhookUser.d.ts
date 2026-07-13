@@ -1,0 +1,1 @@
+export declare function v1_updatePremiumWebhookUser(apiKey: string, id: string, events: ("MATCH" | "MMR")[]): Promise<import("../../types/response.type").DefaultApiResponse<unknown> | import("../../types/response.type").DefaultErrorsResponse>;

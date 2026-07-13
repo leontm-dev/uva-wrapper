@@ -1,0 +1,1 @@
+export declare function v1_getPremiumWebhookSettings(apiKey: string): Promise<import("../../types/response.type").DefaultApiResponse<unknown> | import("../../types/response.type").DefaultErrorsResponse>;

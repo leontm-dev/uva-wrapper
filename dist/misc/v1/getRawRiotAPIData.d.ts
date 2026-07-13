@@ -1,0 +1,1 @@
+export declare function v1_getRawRiotAPIData(apiKey: string, region: string, type: string, value: string | string[], platform: string | null, queries: string | null): Promise<import("../../types/response.type").DefaultApiResponse<unknown[]> | import("../../types/response.type").DefaultErrorsResponse>;

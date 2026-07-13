@@ -1,0 +1,1 @@
+export declare function v1_generateCrosshairImage(apiKey: string, id?: string): Promise<import("../../types/response.type").DefaultApiResponse<unknown> | import("../../types/response.type").DefaultErrorsResponse>;
