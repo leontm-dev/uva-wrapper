@@ -8,7 +8,7 @@ export async function doApiRequest<T>(
   apiKey: string,
   url: string,
   query?: Record<string, string | undefined>,
-  init?: RequestInit & { method: "GET" | "POST" },
+  init?: RequestInit & { method: "GET" | "POST" | "PUT" | "DELETE" },
 ): Promise<DefaultApiResponse<T> | DefaultErrorsResponse> {
   return await fetch(
     apiURL + url + Object.entries(query || {}).length
