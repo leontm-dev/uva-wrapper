@@ -1,5 +1,6 @@
 import { v1_addPremiumWebhookUser } from "./addPremiumWebhookUser";
 import { v1_getPremiumWebhookSettings } from "./getPremiumWebhookSettings";
+import { v1_updatePremiumWebhookUser } from "./updatePremiumWebhookUser";
 
 export class v1_PremiumCategory {
   constructor(readonly apiKey: string) {}
@@ -36,5 +37,15 @@ export class v1_PremiumCategory {
       puuid,
       tag,
     );
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/premium/update-premium-webhook-user
+   * @param id Tracked user id
+   * @param events
+   * @returns Tracked user updated successfully
+   */
+  async updateWebhookUser(id: string, events: ("MATCH" | "MMR")[]) {
+    return await v1_updatePremiumWebhookUser(this.apiKey, id, events);
   }
 }
