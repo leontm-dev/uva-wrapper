@@ -11,7 +11,12 @@ export class v3_MMRCategory {
    * @param tag Riot ID tag
    * @returns MMR data retrieved successfully
    */
-  async getName(affinity: string, platform: string, name: string, tag: string) {
+  async getByName(
+    affinity: string,
+    platform: string,
+    name: string,
+    tag: string,
+  ) {
     return await v3_getMMRByName(this.apiKey, affinity, platform, name, tag);
   }
 }
