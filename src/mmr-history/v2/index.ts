@@ -1,4 +1,5 @@
 import { v2_getMMRHistoryByName } from "./getMMRHistoryByName";
+import { v2_getMMRHistoryByPuuid } from "./getMMRHistoryByPuuid";
 
 export class v2_MMRHistoryCategory {
   constructor(readonly apiKey: string) {}
@@ -23,6 +24,22 @@ export class v2_MMRHistoryCategory {
       platform,
       name,
       tag,
+    );
+  }
+
+  /**
+   * @link https://docs.henrikdev.xyz/api-reference/valorant/get-mmr-history-by-puuid-v2
+   * @param affinity Region/affinity (e.g., na, eu, ap, kr)
+   * @param platform Platform (pc, console)
+   * @param puuid Player UUID
+   * @returns MMR history retrieved successfully
+   */
+  async getByPuuid(affinity: string, platform: string, puuid: string) {
+    return await v2_getMMRHistoryByPuuid(
+      this.apiKey,
+      affinity,
+      platform,
+      puuid,
     );
   }
 }
