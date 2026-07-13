@@ -14,4 +14,4 @@ export async function v1_getLeaderboard(
     { method: "GET" },
   );
 }
-export interface v1_getLeaderboard {}
+export interface v1_getLeaderboard_ResponseData {}
