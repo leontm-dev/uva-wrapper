@@ -14,6 +14,10 @@ import { PremiumCategory } from "./premium";
 import { StoreCategory } from "./store";
 import { StoredMatchesCategory } from "./stored-matches";
 import { StoredMMRHistoryCategory } from "./stored-mmr-history";
+import {
+  DefaultApiResponse,
+  DefaultErrorsResponse,
+} from "./types/response.type";
 import { VlrCategory } from "./vlr";
 
 export class UnofficialValorantAPI {
@@ -54,4 +58,15 @@ export class UnofficialValorantAPI {
   Stored_Matches: StoredMatchesCategory;
   Stored_MMR_History: StoredMMRHistoryCategory;
   Vlr: VlrCategory;
+}
+
+export function isError(
+  response: DefaultApiResponse<any> | DefaultErrorsResponse,
+): boolean {
+  if (Object.getOwnPropertyNames(response).includes("errors")) return true;
+
+  return !(
+    Object.getOwnPropertyNames(response).includes("data") &&
+    Object.getOwnPropertyNames(response).includes("status")
+  );
 }
