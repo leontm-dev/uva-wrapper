@@ -14,6 +14,7 @@ import { PremiumCategory } from "./premium";
 import { StoreCategory } from "./store";
 import { StoredMatchesCategory } from "./stored-matches";
 import { StoredMMRHistoryCategory } from "./stored-mmr-history";
+import { DefaultApiResponse, DefaultErrorsResponse } from "./types/response.type";
 import { VlrCategory } from "./vlr";
 export declare class UnofficialValorantAPI {
     private readonly apiKey;
@@ -36,3 +37,4 @@ export declare class UnofficialValorantAPI {
     Stored_MMR_History: StoredMMRHistoryCategory;
     Vlr: VlrCategory;
 }
+export declare function isError(response: DefaultApiResponse<any> | DefaultErrorsResponse): boolean;

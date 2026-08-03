@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UnofficialValorantAPI = void 0;
+exports.isError = isError;
 const account_1 = require("./account");
 const crosshair_1 = require("./crosshair");
 const esports_1 = require("./esports");
@@ -41,3 +42,9 @@ class UnofficialValorantAPI {
     }
 }
 exports.UnofficialValorantAPI = UnofficialValorantAPI;
+function isError(response) {
+    if (Object.getOwnPropertyNames(response).includes("errors"))
+        return true;
+    return !(Object.getOwnPropertyNames(response).includes("data") &&
+        Object.getOwnPropertyNames(response).includes("status"));
+}

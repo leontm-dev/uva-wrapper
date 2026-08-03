@@ -13,12 +13,18 @@ exports.doApiRequest = doApiRequest;
 const api_const_1 = require("../constants/api.const");
 function doApiRequest(apiKey, url, query, init) {
     return __awaiter(this, void 0, void 0, function* () {
-        return yield fetch(api_const_1.apiURL + url + Object.entries(query || {}).length
-            ? "?"
-            : "" +
-                Object.entries(query || {})
-                    .filter((e) => typeof e[1] === "string")
-                    .map((e) => e[0] + "=" + e[1].toString())
-                    .join("&"), Object.assign(Object.assign({}, init), { headers: Object.assign(Object.assign({}, init === null || init === void 0 ? void 0 : init.headers), { Authorization: apiKey }) })).then((res) => res.json());
+        let requestUrl = api_const_1.apiURL;
+        if (url.startsWith("/"))
+            requestUrl += url;
+        else
+            requestUrl += `/${url}`;
+        if (query &&
+            Object.entries(query).filter((e) => e[1] !== undefined).length > 0)
+            requestUrl += "?";
+        requestUrl += Object.entries(query || {})
+            .filter((e) => typeof e[1] === "string")
+            .map((e) => e[0] + "=" + e[1].toString())
+            .join("&");
+        return yield fetch(requestUrl, Object.assign(Object.assign({}, init), { headers: Object.assign(Object.assign({}, init === null || init === void 0 ? void 0 : init.headers), { Authorization: apiKey }) })).then((res) => res.json());
     });
 }
